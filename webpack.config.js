@@ -35,6 +35,11 @@ const config = {
                 use: 'raw-loader'
             }
         ]
-    }
+    },
+    plugins: [
+        new webpack.DefinePlugin({
+            'process.env.REACT_APP_API_BASE_URL': JSON.stringify(process.env.REACT_APP_API_BASE_URL)  
+        })
+    ]
   };
 module.exports = config;
