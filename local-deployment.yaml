@@ -12,9 +12,11 @@ spec:
       labels:
         app: personal-website-frontend
     spec:
+      terminationGracePeriodSeconds: 30
       containers:
-      - name: front-end
-        image: benldouthwaite/personal-website:dev
+      - name: personal-website-frontend
+        image: benldouthwaite/personal-website:v0.0.9
+        imagePullPolicy: "Always"
         ports:
         - containerPort: 8080
 ---
