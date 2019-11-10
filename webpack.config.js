@@ -38,7 +38,8 @@ const config = {
     },
     plugins: [
         new webpack.DefinePlugin({
-            'process.env.REACT_APP_API_BASE_URL': JSON.stringify(process.env.REACT_APP_API_BASE_URL)  
+            'process.env.REACT_APP_PERSONAL_WEBSITE_API_SERVICE_HOST': JSON.stringify(process.env.PERSONAL_WEBSITE_API_SERVICE_HOST),
+            'process.env.REACT_APP_PERSONAL_WEBSITE_API_SERVICE_PORT': JSON.stringify(process.env.PERSONAL_WEBSITE_API_SERVICE_PORT)
         })
     ]
   };
