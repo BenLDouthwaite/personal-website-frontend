@@ -16,6 +16,20 @@ class App extends Component {
   				this.setState({name: res[0]});
   				console.log(res);
   			})
+
+		fetch("/bye")
+  			.then(response => response.json())
+  			.then(res => {
+  				this.setState({name: res[0]});
+  				console.log(res);
+  			})
+
+		fetch("/test")
+  			.then(response => response.json())
+  			.then(res => {
+  				this.setState({name: res[0]});
+  				console.log(res);
+  			})
 	}
 
 	render() {
