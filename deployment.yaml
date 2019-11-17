@@ -15,7 +15,7 @@ spec:
       terminationGracePeriodSeconds: 30
       containers:
       - name: personal-website-frontend
-        image: benldouthwaite/personal-website:v0.0.22
+        image: benldouthwaite/personal-website:latest
         imagePullPolicy: "Always"
         ports:
         - containerPort: 8080
