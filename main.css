@@ -4,8 +4,6 @@ html, body {
 }
 
 #app {
-    font-family: 'Electrolize', sans-serif;
-    background-color: #333333;
     min-height: 100%;
     height: 100%;
     height: -webkit-fill-available;
@@ -13,64 +11,6 @@ html, body {
 }
 
 body {
-  background-color: #FFFF;
+  background-color: #FFFFFF;
   margin: 0;
-}
-
-ul.header li {
-  display: inline;
-  list-style-type: none;
-  margin: 0;
-}
-ul.header {
-  background-color: #111;
-  padding: 0;
-}
-ul.header li a {
-  color: #FFF;
-  font-weight: bold;
-  text-decoration: none;
-  padding: 20px;
-  display: inline-block;
-}
-.content {
-  background-color: #eee;
-  padding: 20px;
-}
-.content h2 {
-  padding: 0;
-  margin: 0;
-}
-.content li {
-  margin-bottom: 10px;
-}
-
-.container {
-  padding-top: 40px;
-}
-
-.header {
-  color: #eee;
-}
-
-.active {
-  background-color: #D4AF37;
-}
-
-blockquote {
-    margin: 0;
-}
-
-blockquote p {
-    padding: 15px;
-    background: #fff;
-    border-radius: 5px;
-}
-
-blockquote p::before {
-    content: '\201C';
-}
-
-blockquote p::after {
-    content: '\201D';
 }
