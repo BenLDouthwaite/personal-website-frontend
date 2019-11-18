@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import MyRouter from './router.js'
 
 class App extends Component {
   
@@ -19,8 +20,9 @@ class App extends Component {
 	}
 
 	render() {
-    	return <div>
-    		<h1>Hello World. Main Page</h1>
+    	return <div className="container" id="home">
+    		<h1>Hello World. Main Page. again awd</h1>
+    		<MyRouter/>
     		<h2>{this.state.name}</h2>
 		</div>
   	}
