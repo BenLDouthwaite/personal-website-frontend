@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 var path = require('path');
 
-var BUILD_DIR = path.resolve(__dirname, './build');
+var BUILD_DIR = path.resolve(__dirname, './');
 var APP_DIR = path.resolve(__dirname, './src/client');
 
 const config = {
@@ -9,8 +9,9 @@ const config = {
      main: APP_DIR + '/index.js'
    },
    output: {
-     filename: 'bundle.js',
+     filename: 'build/[name].bundle.js',
      path: BUILD_DIR,
+     chunkFilename: 'build/[name].bundle.js',
    },
    module: {
         rules: [

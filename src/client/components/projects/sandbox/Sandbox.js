@@ -4,7 +4,7 @@ class Sandbox extends Component {
   render() {
 
       let buttonClick = () => {
-          import(/* webpackChunkName: "math" */ "./math").then(math => {
+          import(/* webpackChunkName: "math" */ "../../utils/math").then(math => {
               console.log("Addition demo: " + math.add(10, 20));
           })
       }
