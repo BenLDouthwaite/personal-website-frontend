@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MyRouter from './router.js'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
   
@@ -15,15 +16,13 @@ class App extends Component {
   			.then(response => response.json())
   			.then(res => {
   				this.setState({name: res[0]});
-  				console.log(res);
+  				console.log("Api connected. Response: " + res);
   			})
 	}
 
 	render() {
     	return <div className="container" id="home">
-    		<h1>Hello World. Main Page. again awd</h1>
     		<MyRouter/>
-    		<h2>{this.state.name}</h2>
 		</div>
   	}
 }
