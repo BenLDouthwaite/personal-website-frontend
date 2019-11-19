@@ -14,6 +14,7 @@ class Projects extends Component {
           <li><NavLink to="/projects/chess">Chess</NavLink></li>
           <li><NavLink to="/projects/korean">Korean</NavLink></li>
           <li><NavLink to="/projects/word-scrambler">Word Scrambler</NavLink></li>
+          <li><NavLink to="/projects/sandbox">Sandbox</NavLink></li>
         </ul>
       </div>
     );
