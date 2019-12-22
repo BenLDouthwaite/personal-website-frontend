@@ -23,6 +23,12 @@ app.get('/*', function(req,res) {
   req.pipe(request(url)).pipe(res);
 });
 
+// TODO How to make the app.get and app.post generic to be shared.
+app.post('/*', function(req,res) {
+  var url = API + req.url
+  req.pipe(request(url)).pipe(res);
+});
+
 app.listen(PORT, HOST);
 
 

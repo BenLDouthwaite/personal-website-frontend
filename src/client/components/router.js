@@ -12,6 +12,7 @@ import Chess from './projects/chess/chess'
 import Korean from './projects/korean/Korean'
 import WordScrambler from './projects/wordscrambler/WordScrambler';
 import Sandbox from './projects/sandbox/Sandbox.js'
+import Tasks from './projects/tasks/Tasks.js'
 
 class MyRouter extends React.Component {
 
@@ -41,6 +42,7 @@ class MyRouter extends React.Component {
                         <Route path="/projects/korean" component={Korean}/>
                         <Route path="/projects/word-scrambler" component={WordScrambler}/>
                         <Route path="/projects/sandbox" component={Sandbox}/>
+                        <Route path="/projects/tasks" component={Tasks}/>
                     </Switch>
                    <Route path="/blog" component={Blog}/>
                    <Route path="/contact" component={Contact}/>
