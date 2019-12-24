@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
+import TaskCard from "./TaskCard"
 
 class Tasks extends Component {
 
@@ -50,6 +51,23 @@ class Tasks extends Component {
         this.setState({newTaskName});
     };
 
+    deleteTask = (task) => {
+
+        let url = '/task/' + task.id;
+        let options = {
+                method: 'DELETE',
+                mode: 'cors',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json;charset=UTF-8'
+                },
+            };
+        fetch(url, options)
+            .then(response => {
+                this.refreshTasks();
+            });
+    }
+
   render() {
 
     return (
@@ -63,6 +81,7 @@ class Tasks extends Component {
                 placeholder="Name"
                 onChange={this.handleNameChange}
             />
+            { /* TODO  Update to work with 'enter' key press too. */ }
             <Button onClick={this.submitNewTask}>
                 Submit
             </Button>
@@ -70,7 +89,13 @@ class Tasks extends Component {
         { this.state.tasks.length > 0 &&
             <div>
                 <ol>
-                  {this.state.tasks.map(task => <li>{task.name}</li>)}
+                  {this.state.tasks.map(task => {
+                    return <TaskCard
+                        key={task.id}
+                        task={task}
+                        deleteTask={this.deleteTask}
+                    />
+                  })}
                 </ol>
             </div>
         }
