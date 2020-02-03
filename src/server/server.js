@@ -18,7 +18,7 @@ const app = express();
 app.use(express.static(__dirname +'./../../')); //serves the index.html
 
 // Proxy requests to the API
-app.get('/*', function(req,res) {
+app.all('/*', function(req,res) {
   var url = API + req.url
   req.pipe(request(url)).pipe(res);
 });

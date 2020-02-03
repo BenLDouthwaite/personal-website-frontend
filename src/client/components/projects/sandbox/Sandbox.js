@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-
 class Sandbox extends Component {
 
   render() {
@@ -17,9 +16,6 @@ class Sandbox extends Component {
         <p>Collection of random frontend tests.
         </p>
         <h3>Dynamic Code Loading</h3>
-        <button onClick={buttonClick}>
-            Demo Code Loading
-        </button>
       </div>
     );
   }
